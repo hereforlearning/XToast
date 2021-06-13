@@ -7,15 +7,15 @@
     android:layout_margin="100dp"
     android:background="@drawable/dialog_toast_bg"
     android:gravity="center"
-    android:minWidth="120dp"
-    android:minHeight="120dp"
+    android:minWidth="30dp"
+    android:minHeight="30dp"
     android:orientation="vertical">
 
     <ImageView
         android:id="@android:id/icon"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
         tools:src="@mipmap/ic_dialog_tip_warning" />
 
     <TextView

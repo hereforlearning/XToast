@@ -2,6 +2,7 @@ package com.hjq.xtoast.demo;
 
 import android.app.Activity;
 import android.content.ContextWrapper;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -58,7 +59,8 @@ import java.util.regex.Pattern;
                     .setText(android.R.id.message, String.valueOf(123))
                       .setOutsideTouchable(true)
                     // 设置窗口背景阴影强度
-r                    .setDraggable(new MovingDraggable())
+                     // 设置成可拖拽的
+                    .setDraggable(new MovingDraggable())
                     .setOnClickListener(android.R.id.message, new XToast.OnClickListener<TextView>() {
 
                         @Override
@@ -279,6 +281,10 @@ r                    .setDraggable(new MovingDraggable())
 //                    else {
                         if(XToaststatic!=null) {
                         XToaststatic.setText(android.R.id.message, String.valueOf(msg.arg1));
+                        if(msg.arg1>200)
+                            XToaststatic.setTextColor(android.R.id.message, Color.WHITE);//"#C10808");
+                        else
+                            XToaststatic.setTextColor(android.R.id.message, Color.RED);//"#C10808");
                         XToaststatic.show();
                     }
                      str = String.format(Locale.CHINA, "hello world arg1 = %d arg2 = %d", msg.arg1, msg.arg2);
